@@ -1,0 +1,141 @@
+MATLAB Code
+% Main function that runs the automated watering of plants system
+
+function automatedWateringSystemm()
+
+    % Initialize the Arduino board
+
+    A_Board = arduino('/dev/cu.SLAB_USBtoUART', 'uno');
+
+
+    % Initialize the soil moisture sensor
+
+    moistureSensor = 'A1';
+
+
+    % Initiate the reallyDry value and MoistureThreshold
+
+    reallyDryValue = 34.5;
+
+    moistureThreshold = 30;
+
+
+    % Set the timer
+
+    time = 0:0.60:200;
+
+    moisture = zeros(size(time));
+
+
+    % Plot the graph
+
+    figure; % Create a figure for the plot
+
+    h = plot(time, moisture); % Plot the initial data
+
+    title('Soil Moisture Monitoring');
+
+    xlabel('Time (seconds)');
+
+    ylabel('Moisture Level');
+
+    xlim([0 100]); % Set x-axis limit to 0-600 seconds
+
+    ylim([0 50]);  % Set y-axis limit to 0-50 (custom mapping)
+
+
+    for i = 1:length(time)
+
+        moisture_Reading = readMoistureReading(A_Board, moistureSensor);
+
+        moisture(i) = mapMoistureReading(moisture_Reading);
+
+
+        if moisture(i) >= reallyDryValue
+
+            disp('Soil is dry, need water immediately');
+
+            startWaterPump(A_Board, 5);
+
+        elseif moisture(i) >= moistureThreshold && moisture(i) < reallyDryValue
+
+            disp('Ample amount of water is required');
+
+            startWaterPump(A_Board, 2);
+
+        elseif moisture(i) >= 0 && moisture(i) < moistureThreshold
+
+            disp('Plant is adequately watered, thanks');
+
+        else
+
+            disp('Some error, please investigate and resolve it');
+
+            error('Breaking out of function');
+
+        end
+
+
+        updatePlot(h, time(1:i), moisture(1:i));
+
+
+        pause(0.3);
+
+    end
+
+end
+
+
+% Function to read the moisture sensor reading
+
+function moistureReading = readMoistureReading(A_Board, moistureSensor)
+
+    moistureReading = readVoltage(A_Board, moistureSensor);
+
+    disp(['moisture reading is **', num2str(moistureReading)]);
+
+end
+
+
+% Function to map the moisture sensor reading to a value between 0 and 100
+
+function mappedValue = mapMoistureReading(moistureReading)
+
+    mappedValue = customMap(moistureReading, 0, 5, 0, 50);
+
+    disp(['moisture reading is ', num2str(mappedValue)]);
+
+end
+
+
+% Function to start the water pump for a specified duration
+
+function startWaterPump(A_Board, duration)
+
+    writeDigitalPin(A_Board, 'D2', 1);
+
+    pause(duration);
+
+    writeDigitalPin(A_Board, 'D2', 0);
+
+end
+
+
+% Function to update the plot with live data
+
+function updatePlot(h, xData, yData)
+
+    set(h, 'XData', xData, 'YData', yData, 'Color', 'k');
+
+    drawnow; % Update the plot
+
+end
+
+
+% Custom mapping function
+
+function mappedValue = customMap(value, in_min, in_max, out_min, out_max)
+
+    mappedValue = (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+
+end
