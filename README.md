@@ -29,21 +29,23 @@ It features **real-time data visualization**, **OLED feedback**, and **automatic
 
 ---
 
+
 ## 🌿 Project Setup & Flow
 
 Here’s the actual hardware setup of my **Auto Plant Watering System** and the **system flow diagram** that shows how it works.
 
 <p align="center">
-  <img src="https://github.com/shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/setup.jpg" width="600">
+  <img src="https://github.com/shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/blob/main/Setup.jpg" width="600">
   <br>
-  <em>Figure 1: Complete hardware setup with Grove board, moisture sensor, water pump, and MATLAB monitoring.</em>
+  <em>Figure 1: Full hardware setup with Grove board, moisture sensor, pump, and MATLAB interface.</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/flowchart.jpg" width="600">
+  <img src="https://github.com/shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/blob/main/flowchartjpg.jpg" width="600">
   <br>
-  <em>Figure 2: System flowchart showing control logic for automated watering.</em>
+  <em>Figure 2: System flowchart showing automated control logic.</em>
 </p>
+
 ---
 
 ## 💻 Software Overview
