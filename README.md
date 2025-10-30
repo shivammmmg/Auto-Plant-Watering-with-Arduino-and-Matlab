@@ -61,14 +61,7 @@ It features **real-time data visualization**, **OLED feedback**, and **automatic
 6. System stops when the button is pressed or process completes.
 
 ---
-Arduino board started for the watering process.
-Soil is dry, Watering for 2 seconds
-Soil is now wet after 4 seconds of watering
-
-********* Watering Process Log: *********
-2023-04-23 15:10:22 Soil is dry, Watering for 2 seconds
-2023-04-23 15:10:26 Soil is now wet after 4 seconds of watering
-Total Watering Time was 4 Seconds
+<pre> Arduino board started for the watering process. Soil is dry, Watering for 2 seconds Soil is now wet after 4 seconds of watering ********* Watering Process Log: ********* 2023-04-23 15:10:22 Soil is dry, Watering for 2 seconds 2023-04-23 15:10:26 Soil is now wet after 4 seconds of watering Total Watering Time was 4 Seconds </pre>
 
 
 ---
