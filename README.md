@@ -5,7 +5,8 @@ It features **real-time data visualization**, **OLED feedback**, and **automatic
 
 ---
 🎯 **Objective**
-To design and implement an automated plant watering system that integrates **Arduino**, **Java**, and **MATLAB** for real-time soil moisture monitoring, intelligent pump control, and data visualization — demonstrating the fusion of software engineering and embedded systems.
+ To design and implement an automated plant watering system that integrates **Arduino**, **Java**, and **MATLAB** for real-time soil moisture monitoring, intelligent pump control, and data visualization — demonstrating the fusion of software engineering and embedded systems.
+
 ---
 
 ## 🧩 Features
