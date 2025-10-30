@@ -4,8 +4,9 @@ An automated plant watering system that monitors soil moisture levels and contro
 It features **real-time data visualization**, **OLED feedback**, and **automatic logging** of watering actions.
 
 ---
-##🎯 **Objective**
- To design and implement an automated plant watering system that integrates **Arduino**, **Java**, and **MATLAB** for real-time soil moisture monitoring, intelligent pump control, and data visualization — demonstrating the fusion of software engineering and embedded systems.
+🎯 **Objective**  
+To design and implement an automated plant watering system that integrates **Arduino**, **Java**, and **MATLAB** for real-time soil moisture monitoring, intelligent pump control, and data visualization — demonstrating the fusion of software engineering and embedded systems.
+
 
 ---
 
