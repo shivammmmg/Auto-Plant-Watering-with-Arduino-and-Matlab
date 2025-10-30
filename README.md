@@ -73,7 +73,7 @@ Total Watering Time was 4 Seconds
 
 ---
 
-## 📈 MATLAB Integration (EECS 1011)
+## 📈 MATLAB Integration
 MATLAB was used for:
 - Reading analog sensor values using `readVoltage()`
 - Sending control signals via `writeDigitalPin()`
@@ -84,8 +84,7 @@ MATLAB was used for:
 
 ## 🧑‍💻 Author
 **Shivam Gupta**  
-🎓 B.Eng. Software Engineering @ York University  
-📘 Course: EECS 1011 — Under the guidance of Prof. James Andrew Smith  
+🎓 B.Eng. Software Engineering @ York University   
 📧 inbox11shivam@gmail.com  
 🔗 [LinkedIn](https://linkedin.com/in/shivammmmg) • [Portfolio](https://shivammmmg.com)
 
@@ -97,15 +96,5 @@ MATLAB was used for:
 - [Capacitive Moisture Sensor](https://www.seeedstudio.com/Grove-Capacitive-Moisture-Sensor-Corrosion-Resistant.html)  
 - [MATLAB Arduino I/O Library](https://www.mathworks.com/help/supportpkg/arduinoio/ref/readvoltage.html)
 
----
-
-## 🏷️ Topics
-`arduino` • `java` • `matlab` • `fpga` • `automation` • `iot` • `firmata4j` • `jfreechart` • `oled` • `embedded-systems`
-
-
-
-
 
 [Minor_Project_EECS_1011_ShivamGupta_219923309.docx](https://github.com/Shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/files/15446233/Minor_Project_EECS_1011_ShivamGupta_219923309.docx)
-
-## 🖥️ Example Console Output
