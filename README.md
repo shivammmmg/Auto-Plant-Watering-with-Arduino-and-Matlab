@@ -41,7 +41,7 @@ Here’s the actual hardware setup of my **Auto Plant Watering System** and the 
 </p>
 
 <p align="center">
-  <img src="https://github.com/shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/blob/main/flowchartjpg.jpg" width="800">
+  <img src="https://github.com/shivammmmg/Auto-Plant-Watering-with-Arduino-and-Matlab/blob/main/Flowchart.png" width="600">
   <br>
   <em>Figure 2: System flowchart showing automated control logic.</em>
 </p>
